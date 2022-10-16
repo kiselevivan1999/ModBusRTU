@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ModBusRTU.Models;
 
 namespace ModBusRTU.Controllers
 {
@@ -18,9 +15,26 @@ namespace ModBusRTU.Controllers
             return View();
         }
 
-        public IActionResult Input() 
+        public IActionResult Input(User user) 
         {
-            return View();
+            User checkUser = Project.users.Find(x => x.Email.Contains(user.Email));
+            if (checkUser == null || user.Password != checkUser.Password) 
+            {
+                return View();
+            }
+
+            return Redirect("/");
+        }
+
+        [HttpPost]
+        public IActionResult AddUser(User user)
+        {
+            if (!ModelState.IsValid) 
+            {
+                return View();
+            }
+            Project.users.Add(user);
+            return Redirect("/authorization");
         }
     }
 }
