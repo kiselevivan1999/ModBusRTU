@@ -12,5 +12,10 @@ namespace ModBusRTU.Controllers
         {
             return View();
         }
+
+        public IActionResult AddDevice()
+        {
+            return View();
+        }
     }
 }
