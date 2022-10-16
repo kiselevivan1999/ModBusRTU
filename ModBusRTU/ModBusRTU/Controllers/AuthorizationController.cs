@@ -13,6 +13,11 @@ namespace ModBusRTU.Controllers
             return View();
         }
 
+        public IActionResult Registration() 
+        {
+            return View();
+        }
+
         public IActionResult Input() 
         {
             return View();
