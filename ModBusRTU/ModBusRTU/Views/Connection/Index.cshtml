@@ -1,8 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
     ViewData["Titel"] = "Соединение";
 }
 
-<h1>Соединение</h1>
+<h1 class="text-center">Соединение</h1>
+
+<main>
+    <label>Выберите или добавьте устройство для работы с ним.</label>
+    
+    <form method="post" asp-controller="Connection" asp-action="Connection">
+        <select name="devices" , id="select-devices">
+            <option value="device1">device1</option>
+            <option value="device2">device2</option>
+        </select>
+        <nav>
+            <a href="connection/addDevice">Добавить устройтсво</a>
+        </nav>
+        <input id="button-connect" type="button" value="Соединение">
+    </form>
+    <titel>Устройтсво №1</titel>
+    <table border="1">
+        <tr> <th>№</th> <th>Адрес</th> <th>Значение</th> </tr>
+        <tr> <td>1</td> <td>DC</td> <td>255</td> </tr>
+        <tr> <td>2</td> <td>E0</td> <td>60</td> </tr>
+    </table>
+</main>
+

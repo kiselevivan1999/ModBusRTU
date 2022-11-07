@@ -12,12 +12,77 @@
     }
 
 body {
+    background-color: #d6e6ff;
+}
+
+label{
+    width:100%;
+    margin-top:10px;
+    font-size:20px;
+    display:block;
 }
 
 main {
-    height:100%;
-    background-image: url(Resources/Datasheet.jpg);
+    padding: 10px;
+    height: 100%;
 }
+
+main input:not([type="submit"]):focus{
+    border:1px solid #ff0000
+}
+
+main input[type="submit"]{
+    width:40%;
+    padding:10px 0;
+    text-align:center;
+    font-size:15px;
+    border-radius:5px;
+    border:0;
+    margin-top:10px;
+    background: #ff6a00;
+    font-weight:bold;
+}
+
+#button-connect {
+    width: 40%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#button-connect:focus {
+    width: 40%;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    margin-top: 10px;
+    background-color:green;
+    font-weight: bold;
+}
+
+.text-centre {
+    display:flex;
+    justify-content:center;
+}
+
+form {
+    margin: 0 40%;
+    display: flex;
+    flex-direction:column;
+}
+
+    form.input-button {
+        margin-top: 10px;
+        border: 1px, solid, silver;
+        font-weight:bold;
+    }
+
 
 header {
     width: 100%;
