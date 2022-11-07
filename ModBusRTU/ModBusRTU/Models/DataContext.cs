@@ -10,6 +10,11 @@ namespace ModBusRTU.Models
 
         }
 
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
 
